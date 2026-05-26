@@ -8,31 +8,28 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 19.3.1
 
-# (၂) အဓိက လိုအပ်သော Libraries များ (ထပ်မပြင်ရအောင် ကွက်တိထည့်ထားသည်)
-requirements = python3,kivy==2.3.0,kivymd==1.2.0,requests,urllib3,certifi,idna,charset-normalizer
+# (၂) Libraries များ (ဗားရှင်း အသေမကန့်သတ်ဘဲ Engine ကို အလိုအလျောက် ရှာခိုင်းသည့် စနစ်)
+requirements = python3,kivy,kivymd,requests,urllib3,certifi,idna,charset-normalizer
 
-# (၃) မျက်နှာပြင် အနေအထား သတ်မှတ်ချက်
+# (၃) မျက်နှာပြင် အနေအထား
 orientation = portrait
 fullscreen = 0
 
-# (၄) Android Architecture သတ်မှတ်ချက်
+# (၄) Architecture နှင့် Permissions
 android.archs = arm64-v8a, armeabi-v7a
 android.allow_backup = True
-
-# (၅) ⚠️ အင်တာနက်နှင့် ဖုန်းအခြေအနေ ဖတ်ခွင့် ပေးခြင်း (လိုင်စင်နှင့် Bot အတွက် မရှိမဖြစ်)
 android.permissions = INTERNET, READ_PHONE_STATE
 
-# (၆) Android SDK / NDK ဗားရှင်း သတ်မှတ်ချက်များ (ကျစ်လစ်ပြီး အမှားကင်းစေရန်)
+# (၅) Android SDK / NDK (လက်ရှိ GitHub Actions နှင့် အကိုက်ညီဆုံး ဗားရှင်းများ)
 android.api = 33
 android.minapi = 21
-android.ndk = 25b
 android.ndk_api = 21
 
-# (၇) Buildozer Engine အတွက် လိုအပ်သော သီးသန့် Settings များ
+# (၆) Buildozer Engine Core Settings
 android.private_storage = True
 android.skip_update = False
 android.accept_sdk_license = True
-p4a.branch = master
 
 [buildozer]
 log_level = 2
+warn_on_root = 1
